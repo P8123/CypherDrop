@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CypherDrop | Secure Self-Destructing Notes</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CypherDrop</h1>
+        <p>Drop a secret. It destroys itself the moment it's read.</p>
+        <form action="/create" method="post">
+            <label>Secret Message</label>
+            <textarea name="secret_text" placeholder="Type your confidential text here..." required></textarea>
+            
+            <label>Expiration Time (Seconds)</label>
+            <input type="number" name="ttl_seconds" value="300" required>
+            
+            <button type="submit">Generate Secure Link</button>
+        </form>
+    </div>
+</body>
+</html>

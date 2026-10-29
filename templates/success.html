@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CypherDrop | Link Ready</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container" style="text-align: center;">
+        <h1>CypherDrop</h1>
+        <p>Your secure link is generated. Copy it now—it self-destructs upon first read:</p>
+        <input type="text" value="{{ share_url }}" readonly onclick="this.select();">
+        <br><br>
+        <a href="/">← Create another secret</a>
+    </div>
+</body>
+</html>

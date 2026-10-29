@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CypherDrop | View Secret</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CypherDrop</h1>
+        {% if error %}
+            <h3 class="error-title">⚠️ Access Denied / Expired</h3>
+            <p>{{ error }}</p>
+        {% else %}
+            <h3 style="color: #00ff66;">🔓 Secret Revealed</h3>
+            <div class="secret-box">{{ secret_message }}</div>
+            <p style="color: #ff6b6b;">Warning: This note has been permanently wiped from the server memory.</p>
+        {% endif %}
+        <br>
+        <a href="/">← Create your own secret</a>
+    </div>
+</body>
+</html>
